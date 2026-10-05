@@ -1,0 +1,13 @@
+[target.riscv32imac-unknown-none-elf]
+rustflags = [
+  "-C", "link-arg=-T/workspace/wasm/guest/link.ld",
+  "-C", "target-feature=-c,-a",
+  "-C", "relocation-model=static",
+  "-C", "code-model=medium",
+]
+
+[target.wasm32-unknown-unknown]
+rustflags = [
+  "-C", "link-arg=--initial-memory=83886080",
+  "-C", "link-arg=--max-memory=134217728",
+]

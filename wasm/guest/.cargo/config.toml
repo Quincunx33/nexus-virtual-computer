@@ -1,0 +1,10 @@
+[build]
+target = "riscv32imac-unknown-none-elf"
+
+[target.riscv32imac-unknown-none-elf]
+rustflags = [
+  "-C", "link-arg=-T/workspace/wasm/guest/link.ld",
+  "-C", "target-feature=-c,-a",
+  "-C", "relocation-model=static",
+  "-C", "code-model=medium",
+]
