@@ -225,6 +225,25 @@ Read the [security notes](docs/SECURITY.md) before exposing a deployment to untr
 └── package.json
 ```
 
+## Upcoming features & roadmap
+
+NEXUS is being developed in stages. The next milestones focus on reliability and VM correctness first, followed by richer virtual hardware, safer disk management, a more capable NexusOS desktop and improvements to the lightweight guest browser.
+
+| Phase | Planned focus |
+| --- | --- |
+| **0 — Reliability** | Deployment verification, boot smoke tests, environment diagnostics and cross-browser checks |
+| **1 — VM core** | RV32IM instruction tests, memory/MMIO validation, guest fault diagnostics and performance baselines |
+| **2 — Virtual hardware** | Better keyboard/pointer input, display scaling, timer device and serial diagnostics |
+| **3 — Virtual storage** | Disk export/import, backups, snapshots, quota handling and disk format versioning |
+| **4 — NexusOS** | Better shell, text editor, file manager, desktop window management and guest settings |
+| **5 — Guest browser** | Stronger HTML parsing, basic CSS layout, image rendering and compatibility tests |
+| **6 — Networking** | Stronger proxy tests, clearer network controls, safer redirects and bounded caching |
+| **7 — Performance & tooling** | VM profiling, mobile optimization, CI coverage and reproducible WASM builds |
+
+These are **planned features, not currently shipped capabilities**. The project will keep its browser security boundaries explicit: unrestricted raw TCP/UDP, host filesystem access and a full modern browser engine are not promised by the browser-only architecture.
+
+See the detailed [NEXUS Product Roadmap](docs/ROADMAP.md) for phase-by-phase tasks, priorities and completion criteria.
+
 ## Contributing
 
 Ideas, bug reports and improvements are welcome.
